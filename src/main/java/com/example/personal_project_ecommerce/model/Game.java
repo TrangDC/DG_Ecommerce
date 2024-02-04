@@ -42,7 +42,7 @@ public class Game {
     @JoinColumn(name = "developer_id")
     private Developer developer;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "game_categories",
             joinColumns = @JoinColumn(name = "game_id"),
