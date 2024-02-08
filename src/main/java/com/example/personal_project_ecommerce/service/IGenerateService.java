@@ -9,6 +9,6 @@ public interface IGenerateService<T> {
 
     Optional<T> findById(Long id);
 
-    void save(T t);
+    T save(T t);
 
 }
