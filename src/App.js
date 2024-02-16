@@ -1,6 +1,7 @@
 
 import './App.css';
-import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
+import "./css/style.css";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/HomePage/Home";
 import Shop from "./pages/ShopPage/Shop";
 import Cart from "./pages/CartPage/Cart";
