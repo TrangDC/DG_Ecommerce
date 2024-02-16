@@ -1,6 +1,8 @@
 import React from 'react';
 import {nav, topdropdown} from "../data/Data";
 import {Link} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHeart, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 
 const TopBar = () => {
     return (
@@ -31,8 +33,12 @@ const TopBar = () => {
 
                     <div>
                         <Link className="btn px-0 ml-2" to="/">
-                            <i className="fas fa-heart text-dark"></i>
-                            <span></span>
+                            <FontAwesomeIcon icon={faHeart} className="text-dark" />
+                            <span className="badge text-dark border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
+                        </Link>
+                        <Link className="btn px-0 ml-2" to="/">
+                            <FontAwesomeIcon icon={faShoppingCart} className="text-dark" />
+                            <span className="badge text-dark border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
                         </Link>
                     </div>
 
