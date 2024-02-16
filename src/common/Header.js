@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import TopBar from "./TopBar";
 import {nav} from "../data/Data";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHeart, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
 
@@ -32,7 +34,7 @@ const Header = () => {
                     Category
                     <div className="col-lg-9">
                         <nav className="navbar navbar-expand-lg bg-dark nav-dark py-3 py-lg-0 px-0">
-                            <Link className="text-decoration-none d-block d-lg-none" to={"/"}>
+                            <Link className="text-decoration-none d-none d-lg-none" to={"/"}>
                                 <span className="h1 text-uppercase text-primary bg-dark px-2">
                                     Multi
                                 </span>
@@ -52,20 +54,27 @@ const Header = () => {
                                 <div className="navbar-nav mr-auto py-0">
                                     {
                                         nav.slice(0, 4).map((value, index) => (
-                                            <Link to={value.path} key={index} className="nav-link nav-item">
+                                            <Link to={value.path} key={index} className="nav-link nav-item text-white">
                                                 {value.text}
                                             </Link>
                                         ))
                                     }
+                                </div>
+                                <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
+                                    <Link className="btn px-0 ml-2" to="/">
+                                        <FontAwesomeIcon icon={faHeart} className="text-white" />
+                                        <span className="badge text-white border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
+                                    </Link>
+                                    <Link className="btn px-0 ml-2" to="/">
+                                        <FontAwesomeIcon icon={faShoppingCart} className="text-white" />
+                                        <span className="badge text-white border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
+                                    </Link>
                                 </div>
                             </div>
                         </nav>
                     </div>
                 </div>
             </div>
-            {/*<Link to={"/"}>Home</Link>*/}
-            {/*<Link to={"/shop"}>Shop</Link>*/}
-            {/*<Link to={"/cart"}>Cart</Link>*/}
         </div>
     );
 };
