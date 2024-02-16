@@ -14,8 +14,8 @@ const TopBar = () => {
                     <div className="d-inline-flex align-items-center h-100">
                         {
                             topdropdown.map((value, index) => (
-                                <div>
-                                    <button type="button">
+                                <div className="btn-group" key={index}>
+                                    <button type="button" className="btn btn-sm btn-light dropdown-toggle">
                                         {value.btn}
                                     </button>
                                 </div>
