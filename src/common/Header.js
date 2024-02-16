@@ -4,6 +4,7 @@ import TopBar from "./TopBar";
 import {nav} from "../data/Data";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import Category from "./Category";
 
 const Header = () => {
 
@@ -31,10 +32,10 @@ const Header = () => {
             <div className={`container-fluid bg-dark mb-30
                             ${ isSticky ? "sticky-header": ""}`}>
                 <div className="row px-xl-5">
-                    Category
+                    <Category/>
                     <div className="col-lg-9">
                         <nav className="navbar navbar-expand-lg bg-dark nav-dark py-3 py-lg-0 px-0">
-                            <Link className="text-decoration-none d-none d-lg-none" to={"/"}>
+                            <Link className="text-decoration-none d-block d-lg-none" to={"/"}>
                                 <span className="h1 text-uppercase text-primary bg-dark px-2">
                                     Multi
                                 </span>
