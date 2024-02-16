@@ -1,5 +1,5 @@
 import React from 'react';
-import {nav} from "../data/Data";
+import {nav, topdropdown} from "../data/Data";
 import {Link} from "react-router-dom";
 
 const TopBar = () => {
@@ -10,13 +10,15 @@ const TopBar = () => {
 
                 </div>
 
-                <div className={"col-lg-6 d-lg-block"}>
+                <div className={"col-lg-6 text-center d-lg-block"}>
                     <div className="d-inline-flex align-items-center h-100">
                         {
-                            nav.slice(2, 5).map((value, index) => (
-                                <Link key={index} className={"text-body mr-3"}>
-                                    {value.text}
-                                </Link>
+                            topdropdown.map((value, index) => (
+                                <div>
+                                    <button type="button">
+                                        {value.btn}
+                                    </button>
+                                </div>
                             ))
                         }
                     </div>
