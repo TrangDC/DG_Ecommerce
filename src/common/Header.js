@@ -62,11 +62,11 @@ const Header = () => {
                                     }
                                 </div>
                                 <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
-                                    <Link className="btn px-0 ml-2" to="/">
+                                    <Link className="btn px-0 ml-2">
                                         <FontAwesomeIcon icon={faHeart} className="text-white" />
                                         <span className="badge text-white border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
                                     </Link>
-                                    <Link className="btn px-0 ml-2" to="/">
+                                    <Link className="btn px-0 ml-2" to="/cart">
                                         <FontAwesomeIcon icon={faShoppingCart} className="text-white" />
                                         <span className="badge text-white border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
                                     </Link>
