@@ -18,20 +18,21 @@ const TopBar = () => {
                     </div>
                 </div>
 
-                <div className={"col-lg-6 text-center d-lg-block"}>
-                    <div className="d-inline-flex align-items-center h-100">
-                        {
-                            topdropdown.map((value, index) => (
-                                <div className="btn-group" key={index}>
-                                    <button type="button" className="btn btn-sm btn-light dropdown-toggle">
-                                        {value.btn}
-                                    </button>
-                                </div>
-                            ))
-                        }
+                <div className="col-lg-6 text-center text-lg-right">
+                    <div className="d-inline-flex align-items-center">
+                        {topdropdown.map((btn, key) => (
+                            <div className="btn-group" key={key}>
+                                <button
+                                    type="button"
+                                    className="btn btn-sm btn-light dropdown-toggle"
+                                >
+                                    {btn.btn}
+                                </button>
+                            </div>
+                        ))}
                     </div>
 
-                    <div>
+                    <div className="d-inline-flex align-items-center d-block d-lg-none">
                         <Link className="btn px-0 ml-2" to="/">
                             <FontAwesomeIcon icon={faHeart} className="text-dark" />
                             <span className="badge text-dark border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
