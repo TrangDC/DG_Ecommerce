@@ -1,5 +1,5 @@
 import React from 'react';
-import {carousel} from "../data/Data";
+import {banner, carousel} from "../data/Data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,7 +44,20 @@ const Banner = () => {
                     </div>
                 </div>
 
-                <div></div>
+                <div className="col-lg-4">
+                    {banner.map((item, index) => (
+                        <div className="product-offer mb-30" style={{ height: "200px" }}>
+                            <img className="img-fluid" src={item.img} alt="iomg" />
+                            <div className="offer-text">
+                                <h6 className="text-white text-uppercase">{item.discount}</h6>
+                                <h3 className="text-white mb-3">{item.title}</h3>
+                                <Link className="btn btn-primary">
+                                    {item.btn}
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
