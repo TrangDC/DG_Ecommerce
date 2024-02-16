@@ -1,3 +1,6 @@
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCheck, faExchangeAlt, faPhoneVolume, faShippingFast} from "@fortawesome/free-solid-svg-icons";
+
 export const category = [
     {
         id: 1,
@@ -251,22 +254,22 @@ export const banner = [
 export const features = [
     {
         id: 1,
-        icon: <h1 className="fa fa-check text-primary m-0 mr-3"></h1>,
+        icon: <FontAwesomeIcon icon={faCheck} className="text-primary m-0 mr-3"></FontAwesomeIcon>,
         title: "Quality Product",
     },
     {
         id: 2,
-        icon: <h1 className="fa fa-shipping-fast text-primary m-0 mr-2"></h1>,
+        icon: <FontAwesomeIcon icon={faShippingFast} className="text-primary m-0 mr-2"></FontAwesomeIcon>,
         title: "Free Shipping",
     },
     {
         id: 3,
-        icon: <h1 className="fas fa-exchange-alt text-primary m-0 mr-3"></h1>,
+        icon: <FontAwesomeIcon icon={faExchangeAlt} className="text-primary m-0 mr-3"></FontAwesomeIcon>,
         title: "14-Day Return",
     },
     {
         id: 4,
-        icon: <h1 className="fa fa-phone-volume text-primary m-0 mr-3"></h1>,
+        icon: <FontAwesomeIcon icon={faPhoneVolume} className="text-primary m-0 mr-3"></FontAwesomeIcon>,
         title: "24/7 Support",
     },
 ];
