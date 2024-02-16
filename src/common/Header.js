@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import TopBar from "./TopBar";
+import {nav} from "../data/Data";
 
 const Header = () => {
 
@@ -42,9 +43,22 @@ const Header = () => {
                             <button type="button"
                                     className="navbar-toggler bg-success"
                                     onClick={() => setToggler(!toggler)}>
-                                <span className="navbar-toggler-icon">
-                                </span>
+                                <span className="navbar-toggler-icon"></span>
                             </button>
+                            <div className={toggler
+                                ? "toggle navbar-collapse justify-content-between"
+                                : "navbar-collapse justify-content-between collapse"}>
+
+                                <div className="navbar-nav mr-auto py-0">
+                                    {
+                                        nav.slice(0, 4).map((value, index) => (
+                                            <Link to={value.path} key={index} className="nav-link nav-item">
+                                                {value.text}
+                                            </Link>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                         </nav>
                     </div>
                 </div>
