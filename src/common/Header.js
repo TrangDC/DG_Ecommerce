@@ -5,8 +5,13 @@ import {nav} from "../data/Data";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import Category from "./Category";
+import {useDispatch, useSelector} from "react-redux";
 
 const Header = () => {
+
+    const dispatch = useDispatch();
+    const {totalItems} = useSelector((state) => state.cart);
+
 
     const [isSticky, setIsSticky] = useState(false);
     const [toggler, setToggler] = useState(false);
@@ -68,7 +73,9 @@ const Header = () => {
                                     </Link>
                                     <Link className="btn px-0 ml-2" to="/cart">
                                         <FontAwesomeIcon icon={faShoppingCart} className="text-white" />
-                                        <span className="badge text-white border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
+                                        <span className="badge text-white border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>
+                                            {totalItems}
+                                        </span>
                                     </Link>
                                 </div>
                             </div>

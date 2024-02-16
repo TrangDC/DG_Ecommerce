@@ -1,12 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {category, products} from "../data/Data";
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faSearch, faShoppingCart, faSyncAlt} from "@fortawesome/free-solid-svg-icons";
+import {useDispatch} from "react-redux";
+import {addToCart, getCartTotal} from "../redux/CartSlice";
 
 const Product = () => {
-    function handleAddToCart(value) {
-        
+    const dispatch = useDispatch();
+    const [qty, setQty] = useState(1)
+    const handleAddToCart = (product) => {
+        let totalPrice = qty * product.price;
+        const tempProduct = {
+            ...product,
+            quantity: qty,
+            totalPrice,
+        }
+        dispatch(addToCart(tempProduct));
+        dispatch(getCartTotal());
     }
 
     return (
