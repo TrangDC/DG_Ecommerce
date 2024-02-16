@@ -2,7 +2,7 @@ import React from 'react';
 import {nav, topdropdown} from "../data/Data";
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHeart, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {faHeart, faSearch, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 
 const TopBar = () => {
     return (
@@ -41,16 +41,35 @@ const TopBar = () => {
                             <span className="badge text-dark border border-dark rounded-circle" style={{ paddingBottom: "2px" }}>0</span>
                         </Link>
                     </div>
-
                 </div>
             </div>
 
             <div className={"row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex"}>
                 <div className="col-lg-4">
                     <Link className="text-decoration-none" to={"/"}>
-                        <span className="h1 text-uppercase text-primary bg-dark px-2">Multi</span>
-                        <span className="h1 text-uppercase text-dark bg-primary px-2">Shop</span>
+                        <span className="h1 text-uppercase text-primary bg-dark px-2">
+                            Multi
+                        </span>
+                        <span className="h1 text-uppercase text-dark bg-primary px-2">
+                            Shop
+                        </span>
                     </Link>
+                </div>
+                <div className="col-lg-4 col-6 text-left">
+                    <form>
+                        <div className="input-group">
+                           <input type="text"
+                                  className="form-control"
+                                  name="text"
+                                  placeholder="Search for product..."
+                           />
+                           <div className="input-group-append">
+                               <span className="input-group-text bg-transparent text-primary">
+                                   <FontAwesomeIcon icon={faSearch}/>
+                               </span>
+                           </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
