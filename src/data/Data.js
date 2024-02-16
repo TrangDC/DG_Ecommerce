@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCheck, faExchangeAlt, faPhoneVolume, faShippingFast} from "@fortawesome/free-solid-svg-icons";
+import {faCheck, faExchangeAlt, faPhoneVolume, faShippingFast, faStar} from "@fortawesome/free-solid-svg-icons";
 
 export const category = [
     {
@@ -158,7 +158,7 @@ export const products = [
         product_img: "../assets/img/product-1.jpg",
         price: "34.99",
         stars: Array(5).fill(
-            <small className="fa fa-star text-primary mr-1"></small>
+            <FontAwesomeIcon icon={faStar} className="text-primary mr-1"></FontAwesomeIcon>
         ),
         ratingCount: 99,
     },
@@ -169,7 +169,7 @@ export const products = [
         product_img: "../assets/img/product-2.jpg",
         price: "12.99",
         stars: Array(5).fill(
-            <small className="fa fa-star text-primary mr-1"></small>
+            <FontAwesomeIcon icon={faStar} className="text-primary mr-1"></FontAwesomeIcon>
         ),
         ratingCount: 99,
     },
@@ -180,7 +180,7 @@ export const products = [
         product_img: "../assets/img/product-5.jpg",
         price: "18.99",
         stars: Array(5).fill(
-            <small className="fa fa-star text-primary mr-1"></small>
+            <FontAwesomeIcon icon={faStar} className="text-primary mr-1"></FontAwesomeIcon>
         ),
         ratingCount: 99,
     },
@@ -191,7 +191,7 @@ export const products = [
         product_img: "../assets/img/product-4.jpg",
         price: "13.99",
         stars: Array(5).fill(
-            <small className="fa fa-star text-primary mr-1"></small>
+            <FontAwesomeIcon icon={faStar} className="text-primary mr-1"></FontAwesomeIcon>
         ),
         ratingCount: 99,
     },
@@ -201,7 +201,7 @@ export const products = [
         product_img: "../assets/img/product-3.jpg",
         price: "23.99",
         stars: Array(5).fill(
-            <small className="fa fa-star text-primary mr-1"></small>
+            <FontAwesomeIcon icon={faStar} className="text-primary mr-1"></FontAwesomeIcon>
         ),
         ratingCount: 99,
     },
@@ -212,7 +212,7 @@ export const products = [
         product_img: "../assets/img/product-6.jpg",
         price: "43.99",
         stars: Array(5).fill(
-            <small className="fa fa-star text-primary mr-1"></small>
+            <FontAwesomeIcon icon={faStar} className="text-primary mr-1"></FontAwesomeIcon>
         ),
         ratingCount: 99,
     },
@@ -222,7 +222,7 @@ export const products = [
         product_img: "../assets/img/product-7.jpg",
         price: "63.99",
         stars: Array(5).fill(
-            <small className="fa fa-star text-primary mr-1"></small>
+            <FontAwesomeIcon icon={faStar} className="text-primary mr-1"></FontAwesomeIcon>
         ),
         ratingCount: 99,
     },
@@ -232,7 +232,7 @@ export const products = [
         product_img: "../assets/img/product-8.jpg",
         price: "53.99",
         stars: Array(5).fill(
-            <small className="fa fa-star text-primary mr-1"></small>
+            <FontAwesomeIcon icon={faStar} className="text-primary mr-1"></FontAwesomeIcon>
         ),
         ratingCount: 99,
     },
