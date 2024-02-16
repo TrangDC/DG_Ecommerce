@@ -55,6 +55,7 @@ const TopBar = () => {
                         </span>
                     </Link>
                 </div>
+
                 <div className="col-lg-4 col-6 text-left">
                     <form>
                         <div className="input-group">
@@ -71,6 +72,12 @@ const TopBar = () => {
                         </div>
                     </form>
                 </div>
+
+                <div className="col-lg-4 col-6 text-right">
+                    <p className="m-0">Customer Service</p>
+                    <h5 className="m-0">0922792530</h5>
+                </div>
+
             </div>
         </div>
     );
