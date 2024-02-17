@@ -6,6 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import Category from "./Category";
 import {useDispatch, useSelector} from "react-redux";
+import {getCartTotal} from "../redux/CartSlice";
 
 const Header = () => {
 
@@ -17,6 +18,7 @@ const Header = () => {
     const [toggler, setToggler] = useState(false);
 
     useEffect(() => {
+        dispatch(getCartTotal)
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
