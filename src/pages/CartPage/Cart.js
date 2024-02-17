@@ -5,6 +5,7 @@ import {faMinus, faPlus, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {useDispatch, useSelector} from "react-redux";
 import {getCartTotal, removeItem, updateQuantity} from "../../redux/CartSlice";
 import StripeCheckout from "react-stripe-checkout";
+import Heading from "../../common/Heading";
 
 const Cart = () => {
 
@@ -45,6 +46,7 @@ const Cart = () => {
 
     return (
         <>
+            <Heading title="Home" subtitle="Cart" />
             {cartProducts.length === 0 ?
                 (
                     emptyCartMsg
@@ -161,15 +163,15 @@ const Cart = () => {
                                         <button className="btn btn-block btn-primary font-weight-bold my-3 py-3">
                                             Proceed To Checkout
                                         </button>
-                                        <StripeCheckout
-                                        token={onToken}
-                                        stripeKey={publishableKey}
-                                        amount={100 * totalAmounts}
-                                        name="MD"
-                                        currency="USD"
-                                        label="Proceed Checkout"
-                                        className="btn btn-block btn-primary font-weight-bold my-3 py-3"
-                                        />
+                                        {/*<StripeCheckout*/}
+                                        {/*token={onToken}*/}
+                                        {/*stripeKey={publishableKey}*/}
+                                        {/*amount={100 * totalAmounts}*/}
+                                        {/*name="MD"*/}
+                                        {/*currency="USD"*/}
+                                        {/*label="Proceed Checkout"*/}
+                                        {/*className="btn btn-block btn-primary font-weight-bold my-3 py-3"*/}
+                                        {/*/>*/}
                                     </div>
                                 </div>
                             </div>
